@@ -12,7 +12,7 @@ app.post("/api/readFile", upload.single("file"), function(req,res){
     res.json({"size": req.file.size + " bytes"})
 })
 
-app.listen(8080, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log('Example app listening on port 3000!')
 })
 
